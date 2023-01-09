@@ -12,6 +12,7 @@ import ShowDetails from "./Pages/ShowDetails";
 import Edit from "./Pages/Edit";
 import New from "./Pages/New";
 import Error from "./Pages/Error";
+import Index from "./Pages/Index";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
         <NavBar />
         <main>
           <Routes>
-            <Route path="/transactions" element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/transactions" element={<Index />} />
             <Route path="/transactions/:index" element={<ShowDetails />} />
             <Route path="/transactions/:index/edit" element={<Edit />} />
             <Route path="/transactions/new" element={<New />} />

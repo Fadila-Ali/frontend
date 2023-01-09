@@ -1,10 +1,9 @@
-import Transactions from "../components/Transactions";
 import "./Home.css";
 
 export default function Home() {
   return (
     <div className="home">
-      <Transactions />
+      <h2>Welcome to the Budget app!</h2>
     </div>
   );
 }
