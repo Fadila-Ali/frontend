@@ -1,5 +1,6 @@
 // DEPENDENCIES
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 // PAGES
 import Home from "./Pages/Home";
@@ -15,6 +16,12 @@ import Error from "./Pages/Error";
 function App() {
   return (
     <div className="App">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pinch Pennies</title>
+        <link rel="canonical" href="http://mysite.com/example"></link>
+        <meta name="description" content="A YouTube clone"></meta>
+      </Helmet>
       <Router>
         <NavBar />
         <main>
