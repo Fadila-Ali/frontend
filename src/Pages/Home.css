@@ -1,0 +1,99 @@
+/*=========GENERAL STYLING============*/
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.transactions section {
+  width: 60%;
+  position: relative;
+  left: 20%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.table {
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  border: 0.5px dotted var(--blue);
+}
+
+.table tbody tr td {
+  padding: 1em 3em;
+  border-bottom: 0.5px dotted gray;
+}
+
+.table thead tr th {
+  padding: 1em 3em;
+  border-bottom: 0.5px dotted gray;
+}
+
+tbody td:not(td:first-of-type):hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.table a {
+  text-decoration: none;
+}
+
+/*=========DARK THEME STYLING============*/
+
+.Dark tbody tr:nth-child(odd) {
+  background: linear-gradient(120deg, var(--neonBlue), var(--dallasBlue));
+  backdrop-filter: blur(10px);
+}
+
+.Dark tbody tr:nth-child(even) {
+  background: linear-gradient(120deg, var(--milleniumBlue), var(--pendoneBlue));
+  backdrop-filter: blur(10px);
+}
+
+.Dark .table a {
+  color: var(--white);
+}
+
+.Dark .table a:hover {
+  color: var(--indigo);
+  font-weight: bold;
+}
+
+/*=========LIGHT THEME STYLING============*/
+
+.Light tbody tr:nth-child(odd) {
+  background: linear-gradient(120deg, var(--pacificBlue), var(--white));
+  backdrop-filter: blur(10px);
+}
+
+.Light tbody tr:nth-child(even) {
+  background: linear-gradient(120deg, var(--white), #00cccc);
+  backdrop-filter: blur(10px);
+}
+
+.Light .table a {
+  color: var(--blue);
+}
+.Light .table a:hover {
+  color: var(--indigo);
+}
+
+/*=============MEDIA QUERY=============*/
+.table {
+  min-height: 0.01%;
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .transactions section {
+    width: 100%;
+    position: relative;
+    left: 0%;
+  }
+}

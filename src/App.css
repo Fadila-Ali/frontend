@@ -1,0 +1,93 @@
+.App {
+  display: grid;
+  grid-template-rows: 0.5fr 6fr;
+  gap: 1rem;
+  height: 100vh;
+  width: 100vw;
+}
+
+/*=========FORMS STYLING==========*/
+.transaction {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.newAndEdit {
+  width: 55%;
+  padding: 0.5em 0;
+  margin: 0.2rem 0;
+  position: relative;
+  left: 20%;
+  text-align: center;
+  border-radius: 0.5em;
+  backdrop-filter: blur(8px);
+  box-shadow: rgb(0, 0, 0, 0.3) 3px 3px 6px, rgb(0, 0, 0, 0.2) -3px -2px 6px;
+  z-index: 10;
+  margin-top: 1em;
+}
+
+.form {
+  margin: auto;
+  text-align: start;
+  margin-left: 3.5em;
+}
+
+input[type],
+textarea {
+  display: block;
+  width: 90%;
+  margin: 0.5em 0;
+  padding: 0.8em 1em;
+  border-radius: 0.2em;
+  border: 0.5px dotted var(--blue);
+}
+
+#submit {
+  width: 30%;
+  background-color: var(--milleniumBlue);
+  color: var(--white);
+  display: inline;
+  margin-right: 2rem;
+}
+
+#submit:hover {
+  background: var(--indigo);
+}
+
+.newAndEdit button {
+  width: 30%;
+  padding: 0.8em 0;
+  border: 0.5px dotted var(--blue);
+  border-radius: 0.2em;
+  background: var(--milleniumBlue);
+  color: var(--white);
+}
+.newAndEdit button:hover {
+  background: var(--indigo);
+}
+
+@media screen and (max-width: 600px) {
+  .newAndEdit {
+    width: 80%;
+    position: relative;
+    left: 10%;
+  }
+  .form {
+    margin-left: 0;
+  }
+  input[type],
+  textarea {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  #submit {
+    width: 80%;
+    margin-bottom: 5px;
+  }
+  .newAndEdit button {
+    width: 80%;
+  }
+}

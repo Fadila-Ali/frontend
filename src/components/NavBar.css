@@ -1,0 +1,91 @@
+/*========NAVBAR=========*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.Dark .nav {
+  background-color: var(--milleniumBlue);
+}
+
+.Light .nav {
+  background-color: var(--pacificBlue);
+}
+
+/*========H1 TITLE=========*/
+.title a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.title h1 {
+  margin: 1rem 0.5rem;
+}
+
+.title img {
+  width: 4rem;
+  border-radius: 0.3rem;
+  margin-right: 1rem;
+}
+
+.Dark .title a {
+  color: var(--white);
+}
+.Dark .title a:hover {
+  color: var(--indigo);
+}
+
+.Light .title a {
+  color: var(--indigo);
+}
+.Light .title a:hover {
+  color: var(--white);
+}
+
+/*========NAVBAR BUTTONS=========*/
+.navButtons a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navButtons button {
+  background: var(--white);
+  padding: 0.5rem;
+  margin: 2rem 0.5rem 0 0.5rem;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+}
+
+.navButtons button:hover {
+  background: var(--indigo);
+  color: #ffffff;
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/*========DARK THEME STYLING=========*/
+
+.Dark .navButtons a {
+  color: var(--navi);
+}
+
+/*========LIGHT THEME STYLING=========*/
+
+.Light .navButtons a {
+  color: var(--navi);
+}
+
+@media screen and (max-width: 600px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  .navButtons button {
+    padding: 5px;
+    margin: 0 5px;
+  }
+}

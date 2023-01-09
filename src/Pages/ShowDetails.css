@@ -1,0 +1,68 @@
+/*===========GENERAL STYLING============*/
+.Show {
+  width: 60%;
+  position: relative;
+  left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 3rem;
+  backdrop-filter: blur(8px);
+  box-shadow: rgb(0, 0, 0, 0.3) 3px 3px 6px, rgb(0, 0, 0, 0.2) -3px -2px 6px;
+  margin-top: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2rem;
+}
+
+.showNavigation {
+  padding: 1.5em;
+  text-align: center;
+  border-radius: 0.5em;
+  backdrop-filter: blur(8px);
+  box-shadow: rgb(0, 0, 0, 0.3) 3px 3px 6px, rgb(0, 0, 0, 0.1) -3px -2px 6px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem 0;
+}
+
+.showNavigation button {
+  background: #f6f4f1;
+  padding: 1em 2em;
+  margin: 1rem;
+  border: none;
+  border-radius: 0.5em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: rgb(0, 0, 0, 0.3) 3px 3px 6px, rgb(0, 0, 0, 0.1) -3px -2px 6px;
+}
+
+.showNavigation button:hover {
+  background: var(--indigo);
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+/*===========DARK STYLING============*/
+
+@media screen and (max-width: 600px) {
+  .Show {
+    width: 95%;
+    position: relative;
+    left: 2%;
+  }
+  .showNavigation {
+    padding: 0;
+    margin: 0;
+  }
+  .showNavigation button {
+    padding: 1em;
+    margin: 1rem;
+    border: none;
+    border-radius: 0.5em;
+  }
+}
