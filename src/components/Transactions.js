@@ -16,7 +16,6 @@ export default function Transactions() {
     axios
       .get(`${API}/transactions`)
       .then((res) => {
-        console.log(res.data);
         setTransactions(res.data);
       })
       .catch((err) => console.log("catch, err"));
@@ -25,7 +24,9 @@ export default function Transactions() {
   const getTotal = (num) => {
     let amount = 0;
     for (let x of num) {
-      amount += Number(x.amount);
+      x.category === "Bills"
+        ? (amount -= Number(x.amount))
+        : (amount += Number(x.amount));
     }
     return amount.toFixed(2);
   };
@@ -57,7 +58,7 @@ export default function Transactions() {
   return (
     <div className="transactions">
       <section>
-        <h2>Bank Account Total: {addColor()}</h2>
+        <h3>Bank Account Total: {addColor()}</h3>
         <table className="table">
           <thead>
             <tr>

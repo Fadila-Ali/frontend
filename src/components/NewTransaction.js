@@ -31,8 +31,7 @@ export default function NewTransaction() {
   return (
     <div className="newAndEdit">
       <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor="itemName">Item Name: </label>
-        <br />
+        <label htmlFor="itemName">Name: </label>
         <input
           id="item_name"
           value={transaction.item_name}
@@ -41,9 +40,7 @@ export default function NewTransaction() {
           required
           onChange={handleTextChange}
         />
-        <br />
-        <label htmlFor="amount">Amount Charged: </label>
-        <br />
+        <label htmlFor="amount">Amount: </label>
         <input
           id="amount"
           value={transaction.amount}
@@ -52,9 +49,7 @@ export default function NewTransaction() {
           required
           onChange={handleTextChange}
         />
-        <br />
         <label htmlFor="date">Transaction Date: </label>
-        <br />
         <input
           id="date"
           value={transaction.date}
@@ -63,9 +58,7 @@ export default function NewTransaction() {
           required
           onChange={handleTextChange}
         />
-        <br />
-        <label htmlFor="from">Merchant Name: </label>
-        <br />
+        <label htmlFor="from">From: </label>
         <input
           id="from"
           value={transaction.from}
@@ -74,18 +67,18 @@ export default function NewTransaction() {
           required
           onChange={handleTextChange}
         />
-        <br />
         <label htmlFor="category">Transaction Category: </label>
-        <br />
-        <input
+        <select
           id="category"
-          value={transaction.category}
-          type="text"
-          placeholder="category"
-          required
           onChange={handleTextChange}
-        />
-        <br />
+          value={transaction.category}
+          className="select"
+          required
+        >
+          <option value=""></option>
+          <option value="Earnings">Income or Earnings</option>
+          <option value="Bills">Expenses or Bills</option>
+        </select>
         <input type="submit" id="submit" />
         <Link to={`/transactions/`}>
           <button>Nevermind!</button>

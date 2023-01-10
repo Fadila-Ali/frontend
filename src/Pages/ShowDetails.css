@@ -1,23 +1,22 @@
 /*===========GENERAL STYLING============*/
 .Show {
-  width: 60%;
+  width: 50%;
   position: relative;
-  left: 20%;
+  left: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
-  padding: 3rem;
+  padding: 2rem;
   backdrop-filter: blur(8px);
   box-shadow: rgb(0, 0, 0, 0.3) 3px 3px 6px, rgb(0, 0, 0, 0.2) -3px -2px 6px;
   margin-top: 2rem;
 }
 
-.card {
+.detail {
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 2rem;
 }
 
 .showNavigation {
@@ -59,9 +58,12 @@
     padding: 0;
     margin: 0;
   }
+  .newAndEdit {
+    padding: 10px;
+  }
   .showNavigation button {
     padding: 1em;
-    margin: 1rem;
+    margin: 1em;
     border: none;
     border-radius: 0.5em;
   }

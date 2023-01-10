@@ -41,7 +41,7 @@ export default function TransactionsDetails() {
 
   return (
     <article className="details">
-      <div className="card">
+      <div className="detail">
         <h2>
           <span>Transaction Name: </span>
           {transaction.item_name}

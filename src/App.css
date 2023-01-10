@@ -16,7 +16,7 @@
 
 .newAndEdit {
   width: 55%;
-  padding: 0.5em 0;
+  padding: 0.2em 0;
   margin: 0.2rem 0;
   position: relative;
   left: 20%;
@@ -25,7 +25,7 @@
   backdrop-filter: blur(8px);
   box-shadow: rgb(0, 0, 0, 0.3) 3px 3px 6px, rgb(0, 0, 0, 0.2) -3px -2px 6px;
   z-index: 10;
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 
 .form {
@@ -35,11 +35,11 @@
 }
 
 input[type],
-textarea {
+select {
   display: block;
   width: 90%;
   margin: 0.5em 0;
-  padding: 0.8em 1em;
+  padding: 0.5em 1em;
   border-radius: 0.2em;
   border: 0.5px dotted var(--blue);
 }
@@ -58,7 +58,7 @@ textarea {
 
 .newAndEdit button {
   width: 30%;
-  padding: 0.8em 0;
+  padding: 0.5em 0;
   border: 0.5px dotted var(--blue);
   border-radius: 0.2em;
   background: var(--milleniumBlue);

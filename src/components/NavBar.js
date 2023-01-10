@@ -4,7 +4,7 @@ import Theme from "./Theme";
 import "./NavBar.css";
 import imgBudget from "../assets/imgBudget.jpeg";
 
-export default function NavBar({ theme }) {
+export default function NavBar({ theme, Total }) {
   return (
     <div className="nav">
       <div className="title">

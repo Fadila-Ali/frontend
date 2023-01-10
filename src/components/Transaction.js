@@ -14,7 +14,13 @@ export default function Transaction({ transaction, index }) {
         <Link to={`/transactions/${index}`}>{transaction.item_name}</Link>
       </td>
       <td>
-        ${transaction.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        {transaction.category === "Bills"
+          ? `-$${transaction.amount
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`
+          : `$${transaction.amount
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`}
       </td>
     </tr>
   );

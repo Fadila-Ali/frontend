@@ -48,7 +48,6 @@ export default function EditTransactions() {
     <div className="newAndEdit">
       <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="itemName">Item Name: </label>
-        <br />
         <input
           id="item_name"
           value={transaction.item_name}
@@ -57,9 +56,7 @@ export default function EditTransactions() {
           required
           onChange={handleTextChange}
         />
-        <br />
         <label htmlFor="amount">Amount Charged: </label>
-        <br />
         <input
           id="amount"
           value={transaction.amount}
@@ -68,9 +65,7 @@ export default function EditTransactions() {
           required
           onChange={handleTextChange}
         />
-        <br />
         <label htmlFor="date">Transaction Date: </label>
-        <br />
         <input
           id="date"
           value={transaction.date}
@@ -79,9 +74,7 @@ export default function EditTransactions() {
           required
           onChange={handleTextChange}
         />
-        <br />
         <label htmlFor="from">Merchant Name: </label>
-        <br />
         <input
           id="from"
           value={transaction.from}
@@ -90,19 +83,17 @@ export default function EditTransactions() {
           required
           onChange={handleTextChange}
         />
-        <br />
-        <label htmlFor="category">Transaction Category: </label>
-        <br />
-        <input
-          id="from"
-          value={transaction.category}
-          type="text"
-          placeholder="category"
-          required
+        <select
+          id="category"
           onChange={handleTextChange}
-        />
-        <br />
-        <br />
+          value={transaction.category}
+          className="select"
+          required
+        >
+          <option value=""></option>
+          <option value="Earnings">Earnings</option>
+          <option value="Bills">Bills</option>
+        </select>
         <input type="submit" id="submit" />
         <Link to={`/transactions/${index}`}>
           <button>Nevermind!</button>
