@@ -13,7 +13,7 @@ import "./App.css";
 
 // COMPONENTS
 import NavBar from "./components/NavBar";
-import BarChart from "./components/BarChart";
+import Charts from "./Pages/Charts";
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/chart" element={<BarChart />} />
+            <Route path="/chart" element={<Charts />} />
             <Route path="/transactions" element={<Index />} />
             <Route path="/transactions/:index" element={<ShowDetails />} />
             <Route path="/transactions/:index/edit" element={<Edit />} />
