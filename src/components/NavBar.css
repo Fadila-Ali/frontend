@@ -107,6 +107,12 @@
   color: var(--navi);
 }
 
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .navButtons button {
+    margin-bottom: 1em;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .nav {
     display: flex;
@@ -119,6 +125,6 @@
   }
   .navButtons button {
     padding: 5px;
-    margin: 0 5px 8px 5px;
+    margin: 0 5px 10px 5px;
   }
 }

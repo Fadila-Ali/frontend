@@ -19,7 +19,7 @@ export default function LineChart() {
         console.log(permits);
         const dates = [...new Set(data.map((each) => each.date.slice(0, 10)))];
         console.log(dates);
-        let countDate = [];
+        // let countDate = [];
         // dates.map((time) => {
         //   let date = time;
         //   let count = 0;
