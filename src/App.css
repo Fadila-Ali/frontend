@@ -4,6 +4,8 @@
   gap: 1rem;
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /*=========FORMS STYLING==========*/
@@ -68,14 +70,25 @@ select {
   background: var(--indigo);
 }
 
-@media screen and (max-width: 600px) {
+/*=============TABLET MEDIA QUERY=============*/
+@media screen and (min-width: 600px) and (max-width: 850px) {
   .newAndEdit {
     width: 80%;
     position: relative;
     left: 10%;
+    padding: 2em 0;
+  }
+}
+
+/*=============MOBILE MEDIA QUERY=============*/
+@media screen and (max-width: 600px) {
+  .newAndEdit {
+    width: 80%;
+    position: relative;
+    left: 8%;
   }
   .form {
-    margin-left: 0;
+    margin: 10px;
   }
   input[type],
   textarea {

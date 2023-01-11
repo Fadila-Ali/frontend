@@ -43,16 +43,16 @@ tbody td:not(td:first-of-type):hover {
   text-decoration: none;
 }
 
-.dog {
+.money {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.dog img {
-  width: 300px;
-  height: 250px;
+.money img {
+  width: 55%;
+  height: 20rem;
   border-radius: 0.5em;
   margin-bottom: 1em;
 }
@@ -73,6 +73,17 @@ tbody td:not(td:first-of-type):hover {
   margin-bottom: 0.5em;
 }
 
+.char {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 10%;
+  margin-bottom: 3em;
+}
+
 /*=========DARK THEME STYLING============*/
 
 .Dark tbody tr:nth-child(odd) {
@@ -86,7 +97,6 @@ tbody td:not(td:first-of-type):hover {
 }
 .Dark .table {
   color: var(--white);
-  border: 0.5px dotted var(--blue);
 }
 
 .Dark .table a {
@@ -98,23 +108,23 @@ tbody td:not(td:first-of-type):hover {
   font-weight: bold;
 }
 
-.Dark .dog button {
+.Dark .money button {
   all: unset;
   width: 15em;
   height: 2.5em;
   border-radius: 0.5em;
   background-color: var(--white);
 }
-.Dark .dog button:hover {
+.Dark .money button:hover {
   background-color: var(--indigo);
   color: var(--white);
 }
 
-.Dark .dog a {
+.Dark .money a {
   text-decoration-line: none;
   color: var(--blue);
 }
-.Dark .dog a:hover {
+.Dark .money a:hover {
   text-decoration-line: none;
   color: var(--white);
 }
@@ -133,7 +143,6 @@ tbody td:not(td:first-of-type):hover {
 
 .Light .table {
   color: var(--blue);
-  border: 0.5px dotted var(--pacificBlue);
 }
 
 .Light .table a {
@@ -143,45 +152,87 @@ tbody td:not(td:first-of-type):hover {
   color: var(--indigo);
 }
 
-.Light .dog button {
+.Light .money button {
   all: unset;
   width: 15em;
   height: 2.5em;
   border-radius: 0.5em;
   background-color: var(--pacificBlue);
 }
-.Light .dog button:hover {
+.Light .money button:hover {
   background-color: var(--indigo);
   color: var(--white);
 }
 
-.Light .dog a {
+.Light .money a {
   text-decoration-line: none;
   color: var(--blue);
 }
-.Light .dog a:hover {
+.Light .money a:hover {
   text-decoration-line: none;
   color: var(--white);
 }
 
-/*=============MEDIA QUERY=============*/
-.table {
-  min-height: 0.01%;
-  overflow-x: auto;
-}
-
-@media screen and (max-width: 600px) {
-  body {
-    margin: 1em;
+/*=============TABLET MEDIA QUERY=============*/
+@media screen and (min-width: 600px) and (max-width: 850px) {
+  .table {
+    min-height: 0.01%;
+    overflow-x: auto;
   }
+
   .transactions section {
-    width: 100%;
+    width: 95%;
     position: relative;
     left: 0%;
-    margin-left: -0.5em;
+    margin-left: 1em;
+  }
+  .table caption {
+    margin-left: 10px;
+  }
+
+  .money img {
+    width: 85%;
+    height: 17rem;
   }
 
   .quote p {
     width: 85%;
+  }
+
+  .char {
+    width: 90%;
+    position: relative;
+    left: 10px;
+  }
+}
+
+/*===========Mobile MEDIA QUERY==================*/
+@media screen and (max-width: 600px) {
+  .table {
+    min-height: 0.01%;
+    overflow-x: auto;
+  }
+
+  .transactions section {
+    width: 92%;
+    position: relative;
+    left: 3.5%;
+  }
+  .table caption {
+    margin-left: 10px;
+  }
+
+  .money img {
+    width: 85%;
+    height: 10rem;
+  }
+
+  .quote p {
+    width: 85%;
+  }
+
+  .char {
+    position: relative;
+    left: 10px;
   }
 }

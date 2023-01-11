@@ -1,13 +1,13 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
-import cuteDog from "../assets/cuteDog.jpeg";
+import dollar from "../assets/dollar.jpeg";
 
 export default function Home() {
   return (
     <div className="home">
       <h2>Welcome to the Budget app!</h2>
-      <div className="dog">
-        <img src={cuteDog} alt="Cute Dog"></img>
+      <div className="money">
+        <img src={dollar} alt="Fake money"></img>
         <div className="quote">
           <p>
             Money wasn't money to Steph. Each digit was her labour, some of her

@@ -1,4 +1,5 @@
 import React from "react";
+import { IoInvertModeOutline } from "react-icons/io5";
 import "./Theme.css";
 
 const Theme = () => {
@@ -33,7 +34,8 @@ const Theme = () => {
 
   return (
     <button className={theme} id="mode" onClick={(e) => toggleTheme(e)}>
-      Switch Theme
+      <IoInvertModeOutline />
+      <span style={{ marginLeft: "5px" }}>Mode</span>
     </button>
   );
 };
